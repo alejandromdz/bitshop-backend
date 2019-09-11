@@ -1,0 +1,40 @@
+app:
+  name: anuglar2-spring-jwt
+
+jwt:
+  header: Authorization
+  expires_in: 600 # 10 minutes
+  secret: queenvictoria
+  cookie: AUTH-TOKEN
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.bfwg: DEBUG
+
+spring:
+  jpa:
+#    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        search:
+          default:
+            directory_provider: filesystem
+            indexBase: indexpath
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: alejandrobitshop@gmail.com
+    password: Acknowl3dg3m3nt
+    properties: 
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        scheduler:
+          priorityLevels: 10
+           
